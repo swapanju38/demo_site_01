@@ -1,0 +1,748 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+body{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.fix{overflow: hidden;}
+.floatleft{
+    float: left;
+}
+
+.floatright{
+    float: right;
+}
+
+/*Fonts Support*/
+
+
+@font-face {
+font-family: 'AgencyFB-Bold';
+src: local('AgencyFB-Bold'), url(../fonts/AgencyFB-Bold.ttf) format('truetype');
+src: local('AgencyFB-Bold'), url(../fonts/AgencyFB-Bold.otf);
+src: local('AgencyFB-Bold'), url(../fonts/AgencyFB-Bold.eot);
+src: local('AgencyFB-Bold'), url(../fonts/AgencyFB-Bold.woff);
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/BebasNeue.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../fonts/bebas.TTF'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'BebasNeue Bold';
+  src: url('../fonts/BebasNeue Bold.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/BebasNeue Bold.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'BebasNeue Book';
+  src: url('../fonts/BebasNeue Book.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/BebasNeue Book.ttf'); /* IE9 Compat Modes */
+}
+
+
+@font-face {
+  font-family: 'BebasNeue Light';
+  src: url('../fonts/BebasNeue Light.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/BebasNeue Light.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'BebasNeue Regular';
+  src: url('../fonts/BebasNeue Regular.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/BebasNeue Regular.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'BebasNeue Thin';
+  src: url('../fonts/BebasNeue Thin.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/BebasNeue Thin.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Full TiltBoogieNF';
+  src: url('../fonts/Full-TiltBoogieNF.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/Full-TiltBoogieNF.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'College Slab SC';
+  src: url('../fonts/CollegeSlabSC.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Crystalcore';
+  src: url('../fonts/Crystalcore.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'EASPORTS15';
+  src: url('../fonts/EASPORTS15.ttf'); /* IE9 Compat Modes */
+}
+
+/*=========================
+    Header Area Styles
+==========================*/
+
+header{
+    background-image: url(../img/header_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    height: 1140px;
+}
+
+
+.social_icons{
+   display: inline;
+    margin-left: 780px;
+    padding-top: 50px;
+    text-align: right;
+    width: 400px;
+}
+
+.social_icons img{
+    margin-right: 20px;
+}
+
+.social_icons p{
+    display: inline-block;
+    font: 400 26px BebasNeue;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.header_content{
+    text-align: center;
+}
+
+.logo{
+    margin-bottom: 60px;
+}
+
+.rsvp a{
+    text-decoration: none;
+}
+
+.rsvp h2{
+    color: #fff;
+    font: 700 49px AgencyFB-Bold;
+    margin: 0;
+    padding-bottom: 10px;
+    letter-spacing: 25px;
+    padding-left: 20px;
+}
+
+.visual_entertainment{
+    
+}
+
+.visual_entertainment img{
+    padding-top: 25px;
+}
+
+
+
+/*=========================
+    Event Section Styles
+==========================*/
+#event{
+    background: #fff;
+}
+.events{
+    color: #fff;
+    display: inline-block;
+}
+
+.relative{
+	float:left;
+	width:49.75%;
+	position: relative;
+}
+.relative img{
+	width:100%;
+	vertical-align:bottom;
+}
+.relative .absolute{
+	position: absolute;
+	bottom:0;
+	width:100%;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+}
+.relative .absolute2{
+	position: absolute;
+	right:0;
+	bottom:0;
+	height:100%;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+}
+.relative .absolute3{
+	position: absolute;
+	left:0;
+	bottom:0;
+	height:100%;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+}
+div.relative:nth-child(1){
+	margin-right:.25%;
+	margin-bottom:.25%;
+}
+div.relative:nth-child(2){
+	margin-left:.25%;
+	margin-bottom:.25%;
+}
+div.relative:nth-child(3){
+	margin-top:.25%;
+	margin-right:.25%;
+}
+div.relative:nth-child(4){
+	margin-left:.25%;
+	margin-top:.25%;
+}
+
+.event_01_content {
+  padding-top: 10px;
+}
+
+.event_01_details p{
+    font-family: "BebasNeue Bold";
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    text-align: right;
+}
+
+.date_and_time {
+  padding-top: 15px;
+}
+
+.date_and_time h3 {
+  font-family: "BebasNeue Bold";
+  font-size: 25px;
+  padding-left: 25px;
+  text-align: left;
+  color: #eeb311;
+}
+
+.date_and_time span{
+    font-family: "BebasNeue Bold";
+    font-size: 45px;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+}
+
+.event_02_title {
+	text-align: right;
+	overflow: hidden;
+	position:absolute;
+	top:0;
+	right:100px;
+}
+
+.starts{
+	font-family: "BebasNeue Bold";
+    font-size: 25px;
+	text-align:center;
+	padding: 0 7px;
+    color: #eeb311;
+}
+
+.starts p span{
+	opacity: .5;
+}
+
+.starts span{
+    color: #fff;
+}
+
+.event_02_title h2{
+    font-family: 'College Slab SC';
+    font-size: 100px;
+    color: #fff;
+    margin: 0;
+}
+
+.event_02_title h3{
+    font-family: "BebasNeue Bold";
+    font-size: 50px;
+    margin: 0;
+}
+
+.details{
+    font-family: "BebasNeue Bold";
+    font-size: 25px;
+	display:block;
+	position:absolute;
+	bottom:50px;
+	right: -30px;
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+}
+
+.details2{
+    font-family: "BebasNeue Bold";
+    font-size: 25px;
+	display:block;
+	position:absolute;
+	bottom:50px;
+	left: -30px;
+	transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+}
+
+.event_03_title{
+	position:absolute;
+	top:30%;
+	right:9px;
+	font-size: 50px;
+	font-family: Crystalcore;
+}
+
+.event_03_time{
+	font-family: "BebasNeue Bold";
+	position: absolute;
+	right:9px;
+	bottom:70px;
+	text-align:right;
+	font-size: 17px;
+}
+.event_03_time span{
+	font-size: 40px;
+}
+
+.event4_title{
+	position: absolute;
+	top: 100px;
+	font-size: 50px;
+	right:120px;
+	font-family:EASPORTS15;
+}
+
+.event4right_text{
+	position: absolute;
+	top:10px;
+	right:10px;
+	opacity: .3;
+	font-size: 40px;
+	font-family: "BebasNeue Bold";
+}
+
+
+/*=============================
+    About Us Section Styles
+===============================*/
+
+#about_us{
+    background: #fff;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.about_us_content h2, .address h2{
+    font: 400 46.05px 'BebasNeue Bold';
+    color: #676767;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.about_us_content p, .address p{
+    font: 500 20.02px / 32.038px CentraleSans;
+    color: #676767;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.google_map img{
+	width:100%;
+}
+
+
+/*=========================
+    Footer Area Styles
+==========================*/
+
+footer{
+    padding: 0px 0 30px 0;
+}
+
+.footer_content p{
+    text-align: right;
+    font: 500 20.02px / 32.038px CentraleSans;
+    color: #676767;
+    margin: 0;
+}
+
+
+
+.tab{
+  background-color: #f9f9f9;
+  padding: 70px 0;
+}
+
+.single_tab{
+  background-color: rgba(0,0,0, 0.05);
+  color: #000;
+  text-align: center;
+  height: 180px;
+  padding: 30px 10px;
+  border-radius: 8px;
+  margin-bottom: 30px; 
+  transition-property: top, left, opacity, box-shadow, background-color;
+  -moz-box-flex: 1;
+transition-delay: 0s;
+transition-duration: 100ms;
+transition-timing-function: ease-out;
+}
+
+.single_tab:hover{
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px 3px #99D1FC;
+  margin: -2px;
+}
+
+
+
+
+
+
+
+#scrollUp {background: url("img/scroll_up.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);bottom: 10px; height: 50px; right: 30px; text-indent: -999999px; width: 50px; border-radius: 3px;
+	transition-property: ocacity; 
+	transition-duration: 2s;
+	transition-delay: 2s;
+	-webkit-transition-duration: 2s;
+	-moz-transition-duration: 2s;
+	-o-transition-duration: 2s;
+}
+
+#scrollUp:hover{
+	opacity: .5;
+}
